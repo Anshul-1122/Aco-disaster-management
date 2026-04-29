@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root Theme Variables */
+:root {
+  --background: 222 47% 6%;
+  --foreground: 213 31% 91%;
+  --border: 222 20% 18%;
+  --input: 222 20% 18%;
+  --ring: 199 89% 48%;
+
+  --card: 222 40% 10%;
+  --card-foreground: 213 31% 91%;
+
+  --popover: 222 40% 10%;
+  --popover-foreground: 213 31% 91%;
+
+  --primary: 199 89% 48%;
+  --primary-foreground: 222 47% 6%;
+
+  --secondary: 222 30% 18%;
+  --secondary-foreground: 213 20% 75%;
+
+  --muted: 222 30% 14%;
+  --muted-foreground: 213 20% 55%;
+
+  --accent: 222 30% 18%;
+  --accent-foreground: 213 20% 75%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+
+  --radius: 0.5rem;
+}
+
+/* Base styles */
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Range Input Styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: #334155;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #06b6d4;
+  cursor: pointer;
+  border: 2px solid #0e7490;
+  transition: background 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #22d3ee;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #06b6d4;
+  cursor: pointer;
+  border: 2px solid #0e7490;
+}
